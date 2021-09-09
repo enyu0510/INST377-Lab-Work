@@ -1,40 +1,88 @@
-YOUR NAME Lab 2: Intro to HTML
-
-Selectors
-Main Page
-
-First, the basics.
-
-You need the following to build your website.
-
-HTML and CSS
-Javascript
-Node.js
-And other web development frameworks
-
-You should list your top 3 goals for the class below.
-
-Learn front-end web design
-Learn new programming languages
-Learn how to work with others in a technical space
-Learn popular web dev frameworks
-
-Let's Try Some Inline Elements
-
-Sometimes you want to draw attention to something in a line of text.
-
-Sometimes you want to strongly emphasize something in the text.
-
-Sometimes you want to do both.
-
-Empty Elements
-
-Soft line breaks can't wrap anything. Neither can image tags, or hard lines.
-Add a hard line under here, and make sure you've used some soft line breaks to match your page to the sample.
-
-Images 
-
-Don't forget to use alt text on your images. It's important for accessibility.
-
-Include a hyperlink here to your github repository for class.
-If you want your repo to be private, be sure to invite Prof A as a "collaborator."
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Jonathan Chen</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style></style>
+  <script src=""></script>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">JONATHAN CHEN Lab 2: CSS Selectors</h1>
+      <nav>
+        <a href="selectors.html">Selectors</a>
+        <a href="index.html">Main Page</a>
+      </nav>
+      <h2 class="subtitle">First, the basics.</h2>
+      <p>You need the following to build your website.</p>
+      <div class="section_1">
+        <ul class="nav">
+          <li>HTML and CSS</li>
+          <li>Javascript</li>
+          <li>Node.js</li>
+        </ul>
+        <span>
+          <p>My 5 favorite albums.</p>
+          <ol>
+            <li>Mansion</li>
+            <li>Spirit: Stallion of the Cimarron</li>
+            <li>The Album</li>
+            <li>Dinosaur</li>
+            <li>Lilac</li>
+          </ol>
+        </span>
+      </div>
+      <div class="section_2">
+        <h2 class="subtitle">Let's Try Some Inline Elements</h2>
+        <p>
+          Sometimes you want to <em> draw attention to something</em> in a line
+          of text.
+        </p>
+        <p>
+          Sometimes you want to
+          <strong> strongly emphasize something</strong> in the text.
+        </p>
+        <p>
+          Sometimes you want to <em><strong>do both.</strong></em>
+        </p>
+      </div>
+      <div class="section_3">
+        <h2>Empty Elements</h2>
+        <p>
+          Soft line breaks can't wrap anything.<br />
+          Neither can image tags, or hard lines.<br />
+          Add a hard line under here, and make sure you've used some soft line
+          breaks to match your page to the sample.
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="wrapper">
+      <div class="section_4">
+        <div class="text">
+          <h2 class="subtitle">Images</h2>
+          <p>Include the four images in the image folder below</p>
+          <p>
+            Don't forget to use alt text on your images. It's important for
+            accessibility.
+          </p>
+        </div>
+        <div class="carousel">
+          <div class="slides">
+            <img src="images/onigiri_1.png" alt="A laughing onigiri" />
+            <img src="images/onigiri_2.png" alt="A smiling onigiri" />
+            <img src="images/onigiri_3.png" alt="An excited onigiri" />
+            <img src="images/onigiri_4.png" alt="A pleasant onigiri" />
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/enyu0510/INST377-Lab-Work"
+        >Include a hyperlink here to your github repository for class.</a
+      >
+      <p>
+        If you want your repo to be private, be sure to invite Prof A as a
+        "collaborator."
+      </p>
+    </div>
+  </body>
+</html>
