@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
+    ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995da; /* Blue */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Add this */
+}
+
+.menu {
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  border: 1px solid #fff; /* For debugging */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995da;
+  background-color: #d6e9fe;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Add this */
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center; /* Change this */
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Update this */
+  align-items: center; /* Add this */
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #d6e9fe;
+  height: 200px;
+  flex: 1;
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995da;
+  flex: initial;
+  width: 300px;
+}
+
+.signup {
+  margin-left: auto;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 600px;
+  position: relative;
+}
+
+.carousel .carousel_item,
+.carousel .carousel_item--hidden {
+  display: none;
+}
+
+.carousel .carousel_item img {
+  max-width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.carousel .carousel_item--visible {
+  display: block;
+}
+
+.carousel .carousel_actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel_actions button {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.toggle.active {
+  background-color: orange;
+  border-color: blue;
+}
+
+.carousel .carousel_actions button#carousel_button--prev {
+  margin-left: 20px;
+}
+
+.carousel .carousel_actions button#carousel_button--next {
+  margin-right: 20px;
+}
+
+/*personal styles*/
+.top {
+  background-color: rgba(0, 139, 139, 0.8);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.blue-text {
+  color: #5995da;
+}
+
+.white-box {
+  border-style: solid;
+  border-width: thin;
+  display: flex;
+}
+
+.my-image {
+  width: 100%;
+  height: auto;
+}
