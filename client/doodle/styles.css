@@ -1,0 +1,22 @@
+.grid {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  font-size: 200px;
+  text-align: center;
+  background-image: url("background.png");
+}
+
+.doodler {
+  width: 87px;
+  height: 85px;
+  position: absolute;
+  background-image: url("doodler-guy.png");
+}
+
+.platform {
+  width: 85px;
+  height: 15px;
+  position: absolute;
+  background-image: url("platform.png");
+}
