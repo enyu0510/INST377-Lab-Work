@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Jonathan Chen</title>
+  </head>
+  <body>
+    <h1>Lab 6</h1>
+    <form>
+      <input type="text" class="search" />
+      <ul class="suggestions">
+        <li>Filter for a restaurant name</li>
+        <li>Or a category</li>
+      </ul>
+    </form>
+    <script>
+      async function windowActions() {
+        endpoint =
+          "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
+        const request = await fetch(endpoint);
+        const restaurants = await request.json();
+
+        function findMatches(wordToMatch, restaurants) {
+          return restaurants.filter((place) => {
+            //figure out if search matches
+            const regex = new RegExp(wordToMatch, "gi");
+            //filter by name and category
+            return place.name.match(regex) || place.category.match(regex);
+          });
+        }
+
+        function displayMatches(event) {
+          const matchArray = findMatches(event.target.value, restaurants);
+          const html = matchArray
+            .map((place) => {
+              return `
+        <ul>
+            <li><div class="name">${place.name}</div></li>
+            <div class="category">${place.category}</div>
+            <div class="address">${place.address_line_1}</div>
+            <div class="city">${place.city}</div>
+            <div class="zip">${place.zip}</div>
+        </ul>
+            `;
+            })
+            .join("");
+          suggestions.innerHTML = html;
+        }
+
+        const searchInput = document.querySelector(".search");
+        const suggestions = document.querySelector(".suggestions");
+
+        searchInput.addEventListener("change", displayMatches);
+        searchInput.addEventListener("keyup", (evt) => {
+          displayMatches(evt);
+        });
+      }
+      window.onload = windowActions;
+    </script>
+  </body>
+</html>

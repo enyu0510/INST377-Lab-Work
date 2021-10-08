@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(timerId);
       timerId = null;
     } else {
-      draw();
+      draw(); 
       timerId = setInterval(moveDown, 1000);
       nextRandom = Math.floor(Math.random() * theTetrominoes.length);
       displayShape();
