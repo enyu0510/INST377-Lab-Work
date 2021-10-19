@@ -49,10 +49,11 @@ async function dataHandler() {
     const html = limitedList
       .map(
         (place) => `  
-    <ul>
-        <li><div class="name">${place.name}</div></li>        
-        <div class="address">${place.address_line_1}</div>        
+    <ul class="red">   
+        <li ><div class="name"><b>${place.name}</b></div></li>
+        <div class="address"><i>${place.address_line_1}</i></div>                
     </ul>
+    <br>
         `
       )
       .join("");
